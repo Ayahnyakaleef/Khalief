@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory of Our Little One | Aesthetic Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&family=Dancing+Script&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #fdf6f0;
+            --accent-color: #a67c52;
+            --text-color: #5d5d5d;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            font-family: 'Quicksand', sans-serif;
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(to bottom, #f9ebe0, var(--bg-color));
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            color: var(--accent-color);
+            margin: 0;
+            animation: fadeInDown 1.5s ease-out;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            margin-top: 10px;
+            opacity: 0.8;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            background: var(--card-bg);
+            padding: 12px;
+            border-radius: 2px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: reveal 0.8s forwards;
+        }
+
+        /* Delay animasi untuk setiap foto */
+        .gallery-item:nth-child(1) { animation-delay: 0.2s; }
+        .gallery-item:nth-child(2) { animation-delay: 0.3s; }
+        .gallery-item:nth-child(3) { animation-delay: 0.4s; }
+        /* ... dan seterusnya */
+
+        .gallery-item:hover {
+            transform: scale(1.05) rotate(2deg);
+            z-index: 10;
+            box-shadow: 0 15px 45px rgba(166, 124, 82, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 1px;
+            display: block;
+            filter: sepia(10%) contrast(105%);
+        }
+
+        .music-widget {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(5px);
+            padding: 10px 25px;
+            border-radius: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            z-index: 1000;
+            border: 1px solid rgba(166, 124, 82, 0.2);
+        }
+
+        .music-info {
+            font-size: 0.75rem;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: var(--accent-color);
+        }
+
+        audio {
+            height: 30px;
+            width: 220px;
+        }
+
+        @keyframes reveal {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        footer {
+            text-align: center;
+            padding: 100px 20px 80px;
+            font-size: 0.9rem;
+        }
+
+        .heart {
+            color: #e74c3c;
+            display: inline-block;
+            animation: beat .25s infinite alternate;
+        }
+
+        @keyframes beat {
+            to { transform: scale(1.2); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Album Si Kecil</h1>
+        <p>Setiap momen adalah cerita cinta yang abadi</p>
+    </header>
+
+    <main class="gallery">
+        <div class="gallery-item"><img src="https://i.postimg.cc/FzyH1LMv/85e6a1f8-e3a5-4d65-8a0f-3b427363ed76-20260511-214641-0000.jpg"></div>
+        <div class="gallery-item"><img src="https://i.postimg.cc/k52MKZ0c/IMG-20260511-WA0018.jpg"></div>
+        <div class="gallery-item"><img src="https://i.postimg.cc/qvRpHSv0/IMG-20260511-WA0014.jpg"></div>
+        <div class="gallery-item"><img src="https://i.postimg.cc/d3wKHSxp/IMG-20260511-WA0017.jpg"></div>
+        <div class="gallery-item"><img src="https://i.postimg.cc/t4YGM6B6/IMG-20260511-WA0015.jpg"></div>
+        <div class="gallery-item"><img src="https://i.postimg.cc/ZnVXfY3w/IMG-20260511-WA0016.jpg"></div>
+        <div class="gallery-item"><img src="https://i.postimg.cc/bJR5JY6y/IMG-20260511-WA0013.jpg"></div>
+        <div class="gallery-item"><img src="https://i.postimg.cc/25R97LJs/IMG-20260511-WA0010.jpg"></div>
+        <div class="gallery-item"><img src="https://i.postimg.cc/DwsB0yZt/IMG-20260511-WA0011.jpg"></div>
+        <div class="gallery-item"><img src="https://i.postimg.cc/Nf2xCf1t/IMG-20260511-WA0009.jpg"></div>
+        <div class="gallery-item"><img src="https://i.postimg.cc/br71fkQY/IMG-20260511-WA0008.jpg"></div>
+        <div class="gallery-item"><img src="https://i.postimg.cc/R0SKmMnP/IMG-20260511-WA0007.jpg"></div>
+        <div class="gallery-item"><img src="https://i.postimg.cc/Kz4TKJfh/IMG-20260511-WA0005.jpg"></div>
+        <div class="gallery-item"><img src="https://i.postimg.cc/jSXM0qSM/IMG-20260511-WA0003(1).jpg"></div>
+        <div class="gallery-item"><img src="https://i.postimg.cc/ydShd77K/IMG-20260511-WA0000.jpg"></div>
+        <div class="gallery-item"><img src="https://i.postimg.cc/BnQxFTq3/IMG-20260511-WA0002.jpg"></div>
+    </main>
+
+    <div class="music-widget">
+        <div class="music-info">🎵 Memutar: Instrumental Menenangkan</div>
+        <audio id="player" controls loop>
+            <source src="https://www.bensound.com/bensound-music/bensound-tomorrow.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <footer>
+        <p>Dibuat dengan <span class="heart">❤</span> untuk kenangan yang tak ternilai</p>
+    </footer>
+
+    <script>
+        // Efek agar foto muncul satu-per-satu saat di-scroll
+        const items = document.querySelectorAll('.gallery-item');
+        items.forEach((item, index) => {
+            item.style.animationDelay = `${(index % 8) * 0.1}s`;
+        });
+    </script>
+
+</body>
+</html>
